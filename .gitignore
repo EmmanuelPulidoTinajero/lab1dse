@@ -1,0 +1,21 @@
+# Llaves SSH generadas por Terraform — NUNCA versionar
+*.pem
+*.key
+
+# Estado y cache de Terraform
+.terraform/
+terraform.tfstate
+terraform.tfstate.*
+crash.log
+crash.*.log
+*.tfplan
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# Credenciales
+.aws/
+*.env

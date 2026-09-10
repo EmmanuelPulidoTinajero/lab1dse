@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab1 DSE</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+    }
+    .card {
+      max-width: 32rem;
+      padding: 2.5rem 2rem;
+      background: #1e293b;
+      border-radius: 16px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+      text-align: center;
+    }
+    h1 { margin: 0 0 0.5rem; font-size: 1.6rem; }
+    p  { margin: 0.4rem 0; line-height: 1.5; color: #94a3b8; }
+    .badge {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.35rem 0.8rem;
+      border-radius: 999px;
+      background: #334155;
+      font-size: 0.85rem;
+      color: #7dd3fc;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Servidor desplegado con Terraform</h1>
+    <p>Práctica <strong>Lab1 DSE</strong> — instancia EC2 en AWS.</p>
+    <p>Esta página se subió a la instancia usando <code>scp</code> (secure copy).</p>
+    <p>Servida por <strong>nginx</strong> sobre Amazon Linux 2023.</p>
+    <span class="badge" id="stamp">Cargando…</span>
+  </div>
+  <script>
+    document.getElementById("stamp").textContent =
+      "Cargada el " + new Date().toLocaleString("es-MX");
+  </script>
+</body>
+</html>
